@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html>
+    <!-- Mirrored from materialist-html.wearecodevision.com/admin-dashboard.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Mar 2017 02:47:47 GMT -->
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+        <link href="assets/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="assets/libraries/owl-carousel/owl.carousel.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/leaflet.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/leaflet.markercluster.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/leaflet.markercluster.default.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/materialist.css" rel="stylesheet" type="text/css" id="css-primary">
+        <title>Materialist - Dashboard</title>
+    </head>
+    <body class="">
+        <div class="admin-wrapper">
+            <div class="admin-sidebar">
+                <a href="index-2.html" class="hidden-md-down">
+                <img src="assets/img/logo-light.png" alt="" class="admin-sidebar-logo">
+                </a>
+                <a href="submit.html" class="btn btn-primary btn-block hidden-md-down">Add Listing</a>
+                <div class="dashboard-nav-primary collapse navbar-toggleable-md">
+                    <ul class="nav nav-pills nav-stacked">
+                        <li class="nav-item">
+                            <a href="admin-dashboard.html" class="nav-link active"><i class="md-icon">dashboard</i> Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="admin-listings.html" class="nav-link "><i class="md-icon">view_list</i> Listings <span>3</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="admin-reviews.html" class="nav-link "><i class="md-icon">rate_review</i> Reviews</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="admin-users.html" class="nav-link "><i class="md-icon">people</i> Users <span>1</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="admin-settings.html" class="nav-link "><i class="md-icon">settings</i> Settings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link"><i class="md-icon">power_settings_new</i> Logout</a>
+                        </li>
+                    </ul>
+                </div>
+                <hr class="hidden-md-down">
+                <div class="hidden-md-down">
+                    <h2>Recent Activity</h2>
+                    <ul class="recent">
+                        <li><img src="assets/img/tmp/profile-1.jpg" alt=""> <a href="#">Adam Smith</a> has added new listing into <a href="#">properties</a> category.</li>
+                        <li><img src="assets/img/tmp/profile-2.jpg" alt=""> <a href="#">Kim Makin</a> is asking for the agent role with review provilege.</li>
+                        <li><img src="assets/img/tmp/profile-3.jpg" alt=""> <a href="#">Kilee Baker</a> has created new account</a> category.</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /.admin-sidebar -->
+            <div class="admin-main">
+                <div class="admin-header">
+                    <div class="admin-header-navigation">
+                        <div class="container-fluid">
+                            <ul class="nav nav-pills">
+                                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                                <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
+                                <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
+                            </ul>
+                            <ul class="nav nav-pills secondary">
+                                <li class="nav-item user-avatar-wrapper hidden-sm-down">
+                                    <a href="#" class="nav-link circle user-avatar-image" style="background-image: url('assets/img/tmp/profile-1.jpg')"></a>
+                                    <span class="user-avatar-status"></span>
+                                    <ul class="header-more-menu">
+                                        <li><a href="#">Profile</a></li>
+                                        <li><a href="#">Password</a></li>
+                                        <li><a href="#">Submissions</a></li>
+                                        <li><a href="#">Logout</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <button class="navbar-toggler pull-xs-right hidden-lg-up" type="button" data-toggle="collapse" data-target=".dashboard-nav-primary">
+                            <i class="md-icon">menu</i>
+                            </button>									
+                        </div>
+                        <!-- /.container -->
+                    </div>
+                    <!-- /.admin-header-navigation -->
+                    <div class="admin-header-search">
+                        <form method="get" action="http://materialist-html.wearecodevision.com/admin-dashboard.html?">
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="md-icon">search</i>
+                                </div>
+                                <!-- /.input-group-addon -->
+                                <input type="text" class="form-control" placeholder="Enter your search keyword ...">
+                            </div>
+                            <!-- /.form-group -->
+                        </form>
+                    </div>
+                    <!-- /.admin-header-search -->
+                </div>
+                <!-- /admin-header -->
+                <div class="admin-content">
+                    <div class="container-fluid">
+                        <div class="admin-title">
+                            <h1>Welcome in Materialist Dashboard</h1>
+                            <ul class="breadcrumb">
+                                <li><a href="index.html">Materialist</a> <i class="md-icon">keyboard_arrow_right</i></li>
+                                <li class="active">Dashboard</li>
+                            </ul>
+                            <!-- /.breadcrumb -->	
+                        </div>
+                        <!-- /.admin-title -->
+                        <div class="admin-stats">
+                            <div class="row">
+                                <div class="col-xs-12 col-lg-6 col-xl-3">
+                                    <div class="admin-stat lime">
+                                        <div class="admin-stat-icon">
+                                            <i class="md-icon">people</i>
+                                        </div>
+                                        <!-- /.admin-stat-icon -->
+                                        <div class="admin-stat-content">
+                                            <h2>Unique Visits</h2>
+                                            <h3>12,291</h3>
+                                        </div>
+                                        <!-- /.admin-stat-content -->
+                                    </div>
+                                    <!-- /.admin-stat -->
+                                </div>
+                                <!-- /.col-* -->
+                                <div class="col-xs-12 col-lg-6 col-xl-3">
+                                    <div class="admin-stat blue">
+                                        <div class="admin-stat-icon">
+                                            <i class="md-icon">search</i>
+                                        </div>
+                                        <!-- /.admin-stat-icon -->
+                                        <div class="admin-stat-content">
+                                            <h2>Total Searches</h2>
+                                            <h3>1,203</h3>
+                                        </div>
+                                        <!-- /.admin-stat-content -->
+                                    </div>
+                                    <!-- /.admin-stat -->
+                                </div>
+                                <!-- /.col-* -->
+                                <div class="col-xs-12 col-lg-6 col-xl-3">
+                                    <div class="admin-stat purple">
+                                        <div class="admin-stat-icon">
+                                            <i class="md-icon">storage</i>
+                                        </div>
+                                        <!-- /.admin-stat-icon -->
+                                        <div class="admin-stat-content">
+                                            <h2>Of Listings</h2>
+                                            <h3>84,524</h3>
+                                        </div>
+                                        <!-- /.admin-stat-content -->
+                                    </div>
+                                    <!-- /.admin-stat -->
+                                </div>
+                                <!-- /.col-* -->
+                                <div class="col-xs-12 col-lg-6 col-xl-3">
+                                    <div class="admin-stat brown">
+                                        <div class="admin-stat-icon">
+                                            <i class="md-icon">message</i>
+                                        </div>
+                                        <!-- /.admin-stat-icon -->
+                                        <div class="admin-stat-content">
+                                            <h2>Unread Messages</h2>
+                                            <h3>453</h3>
+                                        </div>
+                                        <!-- /.admin-stat-content -->
+                                    </div>
+                                    <!-- /.admin-stat -->
+                                </div>
+                                <!-- /.col-* -->
+                            </div>
+                            <!-- /.row -->
+                        </div>
+                        <!-- /.admin-stats -->
+                        <div class="row">
+                            <div class="col-lg-12 col-xl-7">
+                                <div class="admin-box background-primary">
+                                    <h2><strong>Top</strong> Explore Materialist Admin</h2>
+                                    <p>
+                                        Maecenas et porta nulla. Sed feugiat ac felis ut iaculis. Nunc luctus consectetur accumsan. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras congue tristique ligula, vitae tristique metus luctus eu.
+                                    </p>
+                                    <a href="#" class="btn btn-transparent">Read More</a>
+                                </div>
+                                <!-- /.admin-box -->
+                                <div class="admin-box no-padding">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th colspan="3">Listings Waiting For Approval</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><a href="#"><img src="assets/img/tmp/card-1.jpg" alt=""> Piano Lessons For Beginners</a></td>
+                                                <td><a href="#"><img src="assets/img/tmp/profile-1.jpg" alt=""> Linda A. Libby</a></td>
+                                                <td class="action"><a href="#">View more <i class="md-icon">keyboard_arrow_right</i></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td><a href="#"><img src="assets/img/tmp/card-2.jpg" alt=""> Delicious Ocean Restaurant</a></td>
+                                                <td><a href="#"><img src="assets/img/tmp/profile-2.jpg" alt=""> Anita D. Smith</a></td>
+                                                <td class="action"><a href="#">View more <i class="md-icon">keyboard_arrow_right</i></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td><a href="#"><img src="assets/img/tmp/card-3.jpg" alt=""> Cozy Coffee Shop</a></td>
+                                                <td><a href="#"><img src="assets/img/tmp/profile-3.jpg" alt=""> Ida R. Lane</a></td>
+                                                <td class="action"><a href="#">View more <i class="md-icon">keyboard_arrow_right</i></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td><a href="#"><img src="assets/img/tmp/card-1.jpg" alt=""> Programming Services</a></td>
+                                                <td><a href="#"><img src="assets/img/tmp/profile-4.jpg" alt=""> Kim A. Makin</a></td>
+                                                <td class="action"><a href="#">View more <i class="md-icon">keyboard_arrow_right</i></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td><a href="#"><img src="assets/img/tmp/card-2.jpg" alt=""> Honeymoon in Paris</a></td>
+                                                <td><a href="#"><img src="assets/img/tmp/profile-5.jpg" alt=""> Kylee R. Baker</a></td>
+                                                <td class="action"><a href="#">View more <i class="md-icon">keyboard_arrow_right</i></a></td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <td colspan="3" class="text-right">
+                                                    <a href="#">Show Queue<i class="md-icon">keyboard_arrow_right</i></a>
+                                                </td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                                <!-- /.admin-box -->
+                            </div>
+                            <!-- /.col-* -->
+                            <div class="col-lg-12 col-xl-5">
+                                <div class="admin-box">
+                                    <div class="admin-posts">
+                                        <div class="admin-post">
+                                            <div class="admin-post-image">
+                                                <a href="#" style="background-image: url('assets/img/tmp/post-1.jpg');"></a>
+                                            </div>
+                                            <!-- /.admin-post-image -->
+                                            <div class="admin-post-title">
+                                                <h2><a href="#">Meeting All Deadlines</a></h2>
+                                                <h3>18. June 2016</h3>
+                                            </div>
+                                            <!-- /.admin-post-title -->
+                                            <div class="admin-post-action">
+                                                <a href="#">Edit Post <i class="md-icon">keyboard_arrow_right</i></a>
+                                            </div>
+                                            <!-- /.admin-post-action -->
+                                        </div>
+                                        <!-- /.admin-post -->
+                                        <div class="admin-post">
+                                            <div class="admin-post-image">
+                                                <a href="#" style="background-image: url('assets/img/tmp/post-2.jpg');"></a>
+                                            </div>
+                                            <!-- /.admin-post-image -->
+                                            <div class="admin-post-title">
+                                                <h2><a href="#">Best Pricing Model</a></h2>
+                                                <h3>18. June 2016</h3>
+                                            </div>
+                                            <!-- /.admin-post-title -->
+                                            <div class="admin-post-action">
+                                                <a href="#">Edit Post <i class="md-icon">keyboard_arrow_right</i></a>
+                                            </div>
+                                            <!-- /.admin-post-action -->
+                                        </div>
+                                        <!-- /.admin-post -->
+                                        <div class="admin-post">
+                                            <div class="admin-post-image">
+                                                <a href="#" style="background-image: url('assets/img/tmp/post-3.jpg');"></a>
+                                            </div>
+                                            <!-- /.admin-post-image -->
+                                            <div class="admin-post-title">
+                                                <h2><a href="#">How To Hire Developer</a></h2>
+                                                <h3>18. June 2016</h3>
+                                            </div>
+                                            <!-- /.admin-post-title -->
+                                            <div class="admin-post-action">
+                                                <a href="#">Edit Post <i class="md-icon">keyboard_arrow_right</i></a>
+                                            </div>
+                                            <!-- /.admin-post-action -->
+                                        </div>
+                                        <!-- /.admin-post -->
+                                        <div class="admin-post">
+                                            <div class="admin-post-image">
+                                                <a href="#" style="background-image: url('assets/img/tmp/post-1.jpg');"></a>
+                                            </div>
+                                            <!-- /.admin-post-image -->
+                                            <div class="admin-post-title">
+                                                <h2><a href="#">Meeting All Deadlines</a></h2>
+                                                <h3>18. June 2016</h3>
+                                            </div>
+                                            <!-- /.admin-post-title -->
+                                            <div class="admin-post-action">
+                                                <a href="#">Edit Post <i class="md-icon">keyboard_arrow_right</i></a>
+                                            </div>
+                                            <!-- /.admin-post-action -->
+                                        </div>
+                                        <!-- /.admin-post -->
+                                        <div class="admin-post">
+                                            <div class="admin-post-image">
+                                                <a href="#" style="background-image: url('assets/img/tmp/post-2.jpg');"></a>
+                                            </div>
+                                            <!-- /.admin-post-image -->
+                                            <div class="admin-post-title">
+                                                <h2><a href="#">Best Pricing Model</a></h2>
+                                                <h3>18. June 2016</h3>
+                                            </div>
+                                            <!-- /.admin-post-title -->
+                                            <div class="admin-post-action">
+                                                <a href="#">Edit Post <i class="md-icon">keyboard_arrow_right</i></a>
+                                            </div>
+                                            <!-- /.admin-post-action -->
+                                        </div>
+                                        <!-- /.admin-post -->
+                                        <div class="admin-post">
+                                            <div class="admin-post-image">
+                                                <a href="#" style="background-image: url('assets/img/tmp/post-3.jpg');"></a>
+                                            </div>
+                                            <!-- /.admin-post-image -->
+                                            <div class="admin-post-title">
+                                                <h2><a href="#">How To Hire Developer</a></h2>
+                                                <h3>18. June 2016</h3>
+                                            </div>
+                                            <!-- /.admin-post-title -->
+                                            <div class="admin-post-action">
+                                                <a href="#">Edit Post <i class="md-icon">keyboard_arrow_right</i></a>
+                                            </div>
+                                            <!-- /.admin-post-action -->
+                                        </div>
+                                        <!-- /.admin-post -->
+                                    </div>
+                                    <!-- /.admin-posts -->
+                                </div>
+                                <!-- /.admin-box -->
+                            </div>
+                            <!-- /.col-* -->
+                        </div>
+                        <!-- /.row -->
+                        <div class="admin-box no-padding">
+                            <div class="row">
+                                <div class="col-lg-12 col-xl-4">
+                                    <table class="table small-header">
+                                        <thead>
+                                            <tr>
+                                                <th>Rank</th>
+                                                <th>Country</th>
+                                                <th>Value</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td><img src="assets/img/flags/czech-republic.png" alt=""> Czech Republic</td>
+                                                <td>100%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td><img src="assets/img/flags/france.png" alt=""> France</td>
+                                                <td>97%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td><img src="assets/img/flags/spain.png" alt=""> Spain</td>
+                                                <td>86%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td><img src="assets/img/flags/poland.png" alt=""> Poland</td>
+                                                <td>76%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td><img src="assets/img/flags/hungary.png" alt=""> Hungary</td>
+                                                <td>70%</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- /.col-* -->
+                                <div class="col-lg-12 col-xl-4">
+                                    <table class="table small-header">
+                                        <thead>
+                                            <tr>
+                                                <th>Rank</th>
+                                                <th>Country</th>
+                                                <th>Value</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td><img src="assets/img/flags/czech-republic.png" alt=""> Czech Republic</td>
+                                                <td>100%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td><img src="assets/img/flags/france.png" alt=""> France</td>
+                                                <td>97%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td><img src="assets/img/flags/spain.png" alt=""> Spain</td>
+                                                <td>86%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td><img src="assets/img/flags/poland.png" alt=""> Poland</td>
+                                                <td>76%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td><img src="assets/img/flags/hungary.png" alt=""> Hungary</td>
+                                                <td>70%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>6</td>
+                                                <td><img src="assets/img/flags/austria.png" alt=""> Austria</td>
+                                                <td>64%</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- /.col-* -->
+                                <div class="col-lg-12 col-xl-4">
+                                    <table class="table small-header">
+                                        <thead>
+                                            <tr>
+                                                <th>Rank</th>
+                                                <th>Country</th>
+                                                <th>Value</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td><img src="assets/img/flags/czech-republic.png" alt=""> Czech Republic</td>
+                                                <td>100%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td><img src="assets/img/flags/france.png" alt=""> France</td>
+                                                <td>97%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td><img src="assets/img/flags/spain.png" alt=""> Spain</td>
+                                                <td>86%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td><img src="assets/img/flags/poland.png" alt=""> Poland</td>
+                                                <td>76%</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- /.col-* -->				
+                            </div>
+                            <!-- /.row -->
+                        </div>
+                        <!-- /.admin-box -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </div>
+                <!-- /.admin-content -->		
+            </div>
+            <!-- /.admin-main -->
+        </div>
+        <!-- /.admin-wrapper -->
+        <div class="customizer">
+            <div class="customizer-content">
+                <h2>Color Variant</h2>
+                <ul>
+                    <li><a href="assets/css/materialist-red.css" class="background-red"></a></li>
+                    <li><a href="assets/css/materialist-pink.css" class="background-pink"></a></li>
+                    <li><a href="assets/css/materialist-purple.css" class="background-purple"></a></li>
+                    <li><a href="assets/css/materialist-deep-purple.css" class="background-deep-purple"></a></li>
+                    <li><a href="assets/css/materialist-indigo.css" class="background-indigo"></a></li>
+                    <li><a href="assets/css/materialist-blue.css" class="background-blue"></a></li>
+                    <li><a href="assets/css/materialist-light-blue.css" class="background-light-blue"></a></li>
+                    <li><a href="assets/css/materialist-cyan.css" class="background-cyan"></a></li>
+                    <li><a href="assets/css/materialist-teal.css" class="background-teal"></a></li>
+                    <li><a href="assets/css/materialist-green.css" class="background-green"></a></li>
+                    <li><a href="assets/css/materialist-light-green.css" class="background-light-green"></a></li>
+                    <li><a href="assets/css/materialist-lime.css" class="background-lime"></a></li>
+                    <li><a href="assets/css/materialist-yellow.css" class="background-yellow"></a></li>
+                    <li><a href="assets/css/materialist-amber.css" class="background-amber"></a></li>
+                    <li><a href="assets/css/materialist-orange.css" class="background-orange"></a></li>
+                    <li><a href="assets/css/materialist-deep-orange.css" class="background-deep-orange"></a></li>
+                    <li><a href="assets/css/materialist-brown.css" class="background-brown"></a></li>
+                    <li><a href="assets/css/materialist-blue-grey.css" class="background-blue-grey"></a></li>
+                </ul>
+            </div>
+            <!-- /.customizer-content -->
+            <div class="customizer-title">
+                <span><i class="fa fa-cog"></i> Customizer</span>
+            </div>
+            <!-- /.customizer-title -->
+        </div>
+        <!-- /.customizer -->
+        <script type="text/javascript" src="assets/js/jquery.js"></script>
+        <script type="text/javascript" src="assets/js/tether.min.js"></script>
+        <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="assets/js/leaflet.js"></script>
+        <script type="text/javascript" src="assets/js/leaflet.markercluster.js"></script>
+        <script type="text/javascript" src="assets/libraries/owl-carousel/owl.carousel.min.js"></script>
+        <script type="text/javascript" src="assets/js/materialist.js"></script>
+    </body>
+    <!-- Mirrored from materialist-html.wearecodevision.com/admin-dashboard.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Mar 2017 02:47:50 GMT -->
+</html>

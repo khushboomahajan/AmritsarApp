@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from materialist-html.wearecodevision.com/listings-map.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Mar 2017 02:47:47 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">    
+    <link href="assets/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/libraries/owl-carousel/owl.carousel.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/leaflet.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/leaflet.markercluster.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/leaflet.markercluster.default.css" rel="stylesheet" type="text/css">        
+    <link href="assets/css/materialist.css" rel="stylesheet" type="text/css" id="css-primary">
+	
+    <title>Materialist - Listings Map</title>
+</head>
+
+<body class="">
+<div class="page-wrapper">
+	<div class="header-wrapper">
+	<div class="header">
+		<div class="header-inner">
+			<div class="header-top">
+				<div class="container-fluid">
+					<a href="index-2.html">
+						<img src="assets/img/logo.png" alt="" class="header-top-logo">
+					</a>
+
+					<div class="nav-primary-wrapper collapse navbar-toggleable-sm">
+						<ul class="nav nav-pills ">
+							<li class="nav-item has-submenu">
+								<a href="index.html" class="nav-link ">Home</a>
+
+								<ul class="submenu">
+									<li><a href="index-leaflet.html">Leaflet Map</a></li>
+									<li><a href="index-carousel.html">Image Carousel</a></li>
+								</ul>							
+							</li>
+
+							<li class="nav-item has-submenu">
+								<a href="listings.html" class="nav-link active">Listings</a>
+
+								<ul class="submenu">
+									<li><a href="listings.html">Listings Grid</a></li>
+									<li><a href="listings-map.html">Listings Map</a></li>
+									<li><a href="listing-detail.html">Detail Page</a></li>
+								</ul>
+							</li>
+
+							<li class="nav-item has-submenu">
+								<a href="#" class="nav-link ">Pages</a>
+								<ul class="submenu">
+									<li><a href="filters.html">Filters</a></li>
+									<li><a href="submit.html">Submit Listing</a></li>
+									<li><a href="pricing.html">Pricing</a></li>
+									<li><a href="blog.html">Blog List</a></li>
+									<li><a href="blog-detail.html">Blog Detail</a></li>									
+									<li><a href="invoice.html">Invoice</a></li>
+									<li><a href="grid.html">Grid System</a></li>
+									<li><a href="faq.html">FAQ</a></li>
+									<li><a href="messages.html">Messages</a></li>
+									<li><a href="terms-conditions.html">Terms &amp; Conditions</a></li>
+									<li><a href="403.html">403 - Forbidden</a></li>
+									<li><a href="404.html">404 - Not Found</a></li>
+									<li><a href="500.html">500 - Server Error</a></li>
+								</ul>
+							</li>
+
+							<li class="nav-item has-submenu">
+								<a href="#" class="nav-link ">Admin</a>
+
+								<ul class="submenu">
+									<li><a href="admin-dashboard.html">Dashboard</a></li>
+									<li><a href="admin-listings.html">Listings</a></li>
+									<li><a href="admin-reviews.html">Reviews</a></li>
+									<li><a href="admin-users.html">Users</a></li>
+									<li><a href="admin-settings.html">Settings</a></li>
+								</ul>
+							</li>
+						</ul><!-- /.nav -->
+					</div><!-- /.nav-primary-wrapper -->
+
+					<ul class="nav nav-pills secondary">
+						<!--
+						<li class="nav-item">
+							<a href="#" class="nav-link circle"><i class="md-icon">search</i></a>
+						</li>
+						-->
+						<li class="nav-item"><a href="submit.html" class="nav-link circle"><i class="md-icon">add</i></a></li>
+						<li class="nav-item user-avatar-wrapper">
+							<a href="#" class="nav-link circle user-avatar-image" style="background-image: url('assets/img/tmp/profile-1.jpg')"></a>
+							<span class="user-avatar-status"></span>
+
+							<ul class="header-more-menu">
+								<li><a href="#">Profile</a></li>
+								<li><a href="#">Password</a></li>
+								<li><a href="#">Submissions</a></li>
+								<li><a href="#">Logout</a></li>
+							</ul>							
+						</li>
+					</ul>
+
+					<button class="navbar-toggler pull-xs-right hidden-md-up" type="button" data-toggle="collapse" data-target=".nav-primary-wrapper">
+                        <i class="md-icon">menu</i>
+                    </button>						
+				</div><!-- /.container -->
+			</div><!-- /.header-top -->
+
+				
+		</div><!-- /.header-inner -->
+	</div><!-- /.header -->
+</div><!-- /.header-wrapper -->
+	
+    <div class="main-wrapper">
+	    <div class="main">
+	        <div class="main-inner">
+	        	
+
+	            <div class="content">
+	                <div class="container-fluid fullwidth-wrapper">
+	<div class="row">
+		<div class="col-sm-7">
+			<div id="map-leaflet" class="full"></div>
+		</div><!-- /.col-* -->		
+
+		<div class="col-sm-5">			
+			<div class="filter filter-white push-bottom">
+				<form method="get" action="http://materialist-html.wearecodevision.com/listings-map.html?">
+					<div class="row">
+	<div class="col-md-3">
+		<div class="form-group">
+			<label>Location</label>
+			
+			<select class="form-control">
+				<option>New York</option>
+				<option>Washington</option>
+			</select>
+		</div><!-- /.form-group -->
+	</div><!-- /.col-* -->
+
+	<div class="col-md-3">
+		<div class="form-group">
+			<label>Keyword</label>
+			<input type="text" class="form-control">
+		</div><!-- /.form-group -->
+	</div><!-- /.col-* -->
+
+	<div class="col-md-2">
+		<div class="form-group">
+			<label>Price From</label>
+			<input type="text" class="form-control">
+		</div><!-- /.form-group -->
+	</div><!-- /.col-* -->
+
+	<div class="col-md-2">
+		<div class="form-group">
+			<label>Price To</label>
+			<input type="text" class="form-control">
+		</div><!-- /.form-group -->		
+	</div><!-- /.col-* -->
+
+	<div class="col-md-2">
+		<div class="form-group-btn form-group-btn-placeholder-gap">
+			<button type="submit" class="btn btn-primary btn-block">Filter</button>
+		</div><!-- /.form-group -->		
+	</div><!-- /.col-* -->			
+</div><!-- /.row -->
+				</form>
+			</div><!-- /.filter -->
+
+			<div class="row">
+							
+					<div class="col-sm-6">
+						<div class="card">
+	<div class="card-image" style="background-image: url('assets/img/tmp/card-2.jpg');">
+		<a href="listing-detail.html"></a> 
+
+		<div class="card-image-rating">
+			<i class="md-icon">star</i>
+			<i class="md-icon">star</i>
+			<i class="md-icon">star</i>
+			<i class="md-icon">star</i>
+			<i class="md-icon">star</i>
+		</div><!-- /.card-image-rating -->
+	</div><!-- /.card-image -->
+
+	<div class="card-content">
+		<h3><a href="listing-detail.html">Drink &amp; Food</a></h3>
+		<h2><a href="listing-detail.html">Cozzy Coffee Shop</a></h2>
+	</div><!-- /.card-content -->
+
+	<div class="card-actions">
+		<a href="listing-detail.html" class="card-action-icon"><i class="md-icon">favorite</i></a>
+		<a href="listing-detail.html" class="card-action-icon"><i class="md-icon">flag</i></a>
+		<a href="listing-detail.html" class="card-action-btn btn btn-transparent">Show More</a>
+	</div><!-- /.card-actions -->
+</div><!-- /.card -->				
+					</div><!-- /.col-* -->
+							
+					<div class="col-sm-6">
+						<div class="card">
+	<div class="card-image" style="background-image: url('assets/img/tmp/card-1.jpg');">
+		<a href="listing-detail.html"></a> 
+
+		<div class="card-image-rating">
+			<i class="md-icon">star</i>
+			<i class="md-icon">star</i>
+			<i class="md-icon">star</i>
+			<i class="md-icon">star</i>
+			<i class="md-icon">star</i>
+		</div><!-- /.card-image-rating -->
+	</div><!-- /.card-image -->
+
+	<div class="card-content">
+		<h3><a href="listing-detail.html">Education</a></h3>
+		<h2><a href="listing-detail.html">Piano Lessons For Beginners</a></h2>
+	</div><!-- /.card-content -->
+
+	<div class="card-actions">
+		<a href="listing-detail.html" class="card-action-icon"><i class="md-icon">favorite</i></a>
+		<a href="listing-detail.html" class="card-action-icon"><i class="md-icon">flag</i></a>
+		<a href="listing-detail.html" class="card-action-btn btn btn-transparent">Show More</a>
+	</div><!-- /.card-actions -->
+</div><!-- /.card -->				
+					</div><!-- /.col-* -->
+							
+					<div class="col-sm-6">
+						<div class="card">
+	<div class="card-image" style="background-image: url('assets/img/tmp/card-3.jpg');">
+		<a href="listing-detail.html"></a> 
+
+		<div class="card-image-rating">
+			<i class="md-icon">star</i>
+			<i class="md-icon">star</i>
+			<i class="md-icon">star</i>
+			<i class="md-icon">star</i>
+			<i class="md-icon">star</i>
+		</div><!-- /.card-image-rating -->
+	</div><!-- /.card-image -->
+
+	<div class="card-content">
+		<h3><a href="listing-detail.html">Restaurant</a></h3>
+		<h2><a href="listing-detail.html">Delicious Ocean Restaurant</a></h2>
+	</div><!-- /.card-content -->
+
+	<div class="card-actions">
+		<a href="listing-detail.html" class="card-action-icon"><i class="md-icon">favorite</i></a>
+		<a href="listing-detail.html" class="card-action-icon"><i class="md-icon">flag</i></a>
+		<a href="listing-detail.html" class="card-action-btn btn btn-transparent">Show More</a>
+	</div><!-- /.card-actions -->
+</div><!-- /.card -->				
+					</div><!-- /.col-* -->
+							
+					<div class="col-sm-6">
+						<div class="card">
+	<div class="card-image" style="background-image: url('assets/img/tmp/card-4.jpg');">
+		<a href="listing-detail.html"></a> 
+
+		<div class="card-image-rating">
+			<i class="md-icon">star</i>
+			<i class="md-icon">star</i>
+			<i class="md-icon">star</i>
+			<i class="md-icon">star</i>
+			<i class="md-icon">star</i>
+		</div><!-- /.card-image-rating -->
+	</div><!-- /.card-image -->
+
+	<div class="card-content">
+		<h3><a href="listing-detail.html">Food &amp; Drink</a></h3>
+		<h2><a href="listing-detail.html">Healthy Breakfast</a></h2>
+	</div><!-- /.card-content -->
+
+	<div class="card-actions">
+		<a href="listing-detail.html" class="card-action-icon"><i class="md-icon">favorite</i></a>
+		<a href="listing-detail.html" class="card-action-icon"><i class="md-icon">flag</i></a>
+		<a href="listing-detail.html" class="card-action-btn btn btn-transparent">Show More</a>
+	</div><!-- /.card-actions -->
+</div><!-- /.card -->				
+					</div><!-- /.col-* -->
+							
+					<div class="col-sm-6">
+						<div class="card">
+	<div class="card-image" style="background-image: url('assets/img/tmp/card-5.jpg');">
+		<a href="listing-detail.html"></a> 
+
+		<div class="card-image-rating">
+			<i class="md-icon">star</i>
+			<i class="md-icon">star</i>
+			<i class="md-icon">star</i>
+			<i class="md-icon">star</i>
+			<i class="md-icon">star</i>
+		</div><!-- /.card-image-rating -->
+	</div><!-- /.card-image -->
+
+	<div class="card-content">
+		<h3><a href="listing-detail.html">Travel</a></h3>
+		<h2><a href="listing-detail.html">London Trip</a></h2>
+	</div><!-- /.card-content -->
+
+	<div class="card-actions">
+		<a href="listing-detail.html" class="card-action-icon"><i class="md-icon">favorite</i></a>
+		<a href="listing-detail.html" class="card-action-icon"><i class="md-icon">flag</i></a>
+		<a href="listing-detail.html" class="card-action-btn btn btn-transparent">Show More</a>
+	</div><!-- /.card-actions -->
+</div><!-- /.card -->				
+					</div><!-- /.col-* -->
+							
+					<div class="col-sm-6">
+						<div class="card">
+	<div class="card-image" style="background-image: url('assets/img/tmp/card-6.jpg');">
+		<a href="listing-detail.html"></a> 
+
+		<div class="card-image-rating">
+			<i class="md-icon">star</i>
+			<i class="md-icon">star</i>
+			<i class="md-icon">star</i>
+			<i class="md-icon">star</i>
+			<i class="md-icon">star</i>
+		</div><!-- /.card-image-rating -->
+	</div><!-- /.card-image -->
+
+	<div class="card-content">
+		<h3><a href="listing-detail.html">Food &amp; Drink</a></h3>
+		<h2><a href="listing-detail.html">Bio Vegatables</a></h2>
+	</div><!-- /.card-content -->
+
+	<div class="card-actions">
+		<a href="listing-detail.html" class="card-action-icon"><i class="md-icon">favorite</i></a>
+		<a href="listing-detail.html" class="card-action-icon"><i class="md-icon">flag</i></a>
+		<a href="listing-detail.html" class="card-action-btn btn btn-transparent">Show More</a>
+	</div><!-- /.card-actions -->
+</div><!-- /.card -->				
+					</div><!-- /.col-* -->
+					
+			</div><!-- /.row -->		
+
+			<div class="center">
+				<a href="#" class="btn btn-secondary btn-large">Load More</a>
+			</div><!-- /.center -->
+		</div><!-- /.col-* -->		
+	</div><!-- /.row -->
+</div><!-- /.container -->
+	            </div><!-- /.content -->
+	        </div><!-- /.main-inner -->
+	    </div><!-- /.main -->
+    </div><!-- /.main-wrapper -->
+</div><!-- /.page-wrapper -->
+
+<div class="customizer">
+	<div class="customizer-content">
+		<h2>Color Variant</h2>
+
+		<ul>
+			<li><a href="assets/css/materialist-red.css" class="background-red"></a></li>
+			<li><a href="assets/css/materialist-pink.css" class="background-pink"></a></li>
+			<li><a href="assets/css/materialist-purple.css" class="background-purple"></a></li>			
+			<li><a href="assets/css/materialist-deep-purple.css" class="background-deep-purple"></a></li>			
+			<li><a href="assets/css/materialist-indigo.css" class="background-indigo"></a></li>			
+			<li><a href="assets/css/materialist-blue.css" class="background-blue"></a></li>			
+			<li><a href="assets/css/materialist-light-blue.css" class="background-light-blue"></a></li>			
+			<li><a href="assets/css/materialist-cyan.css" class="background-cyan"></a></li>			
+			<li><a href="assets/css/materialist-teal.css" class="background-teal"></a></li>			
+			<li><a href="assets/css/materialist-green.css" class="background-green"></a></li>			
+			<li><a href="assets/css/materialist-light-green.css" class="background-light-green"></a></li>			
+			<li><a href="assets/css/materialist-lime.css" class="background-lime"></a></li>			
+			<li><a href="assets/css/materialist-yellow.css" class="background-yellow"></a></li>			
+			<li><a href="assets/css/materialist-amber.css" class="background-amber"></a></li>			
+			<li><a href="assets/css/materialist-orange.css" class="background-orange"></a></li>			
+			<li><a href="assets/css/materialist-deep-orange.css" class="background-deep-orange"></a></li>			
+			<li><a href="assets/css/materialist-brown.css" class="background-brown"></a></li>			
+			<li><a href="assets/css/materialist-blue-grey.css" class="background-blue-grey"></a></li>			
+		</ul> 
+	</div><!-- /.customizer-content -->
+
+	<div class="customizer-title">
+		<span><i class="fa fa-cog"></i> Customizer</span>
+	</div><!-- /.customizer-title -->
+</div><!-- /.customizer -->
+
+<script type="text/javascript" src="assets/js/jquery.js"></script>
+<script type="text/javascript" src="assets/js/tether.min.js"></script>
+<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="assets/js/leaflet.js"></script>
+<script type="text/javascript" src="assets/js/leaflet.markercluster.js"></script>
+<script type="text/javascript" src="assets/libraries/owl-carousel/owl.carousel.min.js"></script>
+<script type="text/javascript" src="assets/js/materialist.js"></script>
+</body>
+
+<!-- Mirrored from materialist-html.wearecodevision.com/listings-map.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Mar 2017 02:47:47 GMT -->
+</html>

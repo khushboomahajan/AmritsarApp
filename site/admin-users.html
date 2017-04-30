@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+    <!-- Mirrored from materialist-html.wearecodevision.com/admin-users.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Mar 2017 02:48:00 GMT -->
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+        <link href="assets/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="assets/libraries/owl-carousel/owl.carousel.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/leaflet.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/leaflet.markercluster.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/leaflet.markercluster.default.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/materialist.css" rel="stylesheet" type="text/css" id="css-primary">
+        <title>Materialist - Users</title>
+    </head>
+    <body class="">
+        <div class="admin-wrapper">
+            <div class="admin-sidebar">
+                <a href="index-2.html" class="hidden-md-down">
+                <img src="assets/img/logo-light.png" alt="" class="admin-sidebar-logo">
+                </a>
+                <a href="submit.html" class="btn btn-primary btn-block hidden-md-down">Add Listing</a>
+                <div class="dashboard-nav-primary collapse navbar-toggleable-md">
+                    <ul class="nav nav-pills nav-stacked">
+                        <li class="nav-item">
+                            <a href="admin-dashboard.html" class="nav-link "><i class="md-icon">dashboard</i> Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="admin-listings.html" class="nav-link "><i class="md-icon">view_list</i> Listings <span>3</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="admin-reviews.html" class="nav-link "><i class="md-icon">rate_review</i> Reviews</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="admin-users.html" class="nav-link active"><i class="md-icon">people</i> Users <span>1</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="admin-settings.html" class="nav-link "><i class="md-icon">settings</i> Settings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link"><i class="md-icon">power_settings_new</i> Logout</a>
+                        </li>
+                    </ul>
+                </div>
+                <hr class="hidden-md-down">
+                <div class="hidden-md-down">
+                    <h2>Recent Activity</h2>
+                    <ul class="recent">
+                        <li><img src="assets/img/tmp/profile-1.jpg" alt=""> <a href="#">Adam Smith</a> has added new listing into <a href="#">properties</a> category.</li>
+                        <li><img src="assets/img/tmp/profile-2.jpg" alt=""> <a href="#">Kim Makin</a> is asking for the agent role with review provilege.</li>
+                        <li><img src="assets/img/tmp/profile-3.jpg" alt=""> <a href="#">Kilee Baker</a> has created new account</a> category.</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /.admin-sidebar -->
+            <div class="admin-main">
+                <div class="admin-header">
+                    <div class="admin-header-navigation">
+                        <div class="container-fluid">
+                            <ul class="nav nav-pills">
+                                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                                <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
+                                <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
+                            </ul>
+                            <ul class="nav nav-pills secondary">
+                                <li class="nav-item user-avatar-wrapper hidden-sm-down">
+                                    <a href="#" class="nav-link circle user-avatar-image" style="background-image: url('assets/img/tmp/profile-1.jpg')"></a>
+                                    <span class="user-avatar-status"></span>
+                                    <ul class="header-more-menu">
+                                        <li><a href="#">Profile</a></li>
+                                        <li><a href="#">Password</a></li>
+                                        <li><a href="#">Submissions</a></li>
+                                        <li><a href="#">Logout</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <button class="navbar-toggler pull-xs-right hidden-lg-up" type="button" data-toggle="collapse" data-target=".dashboard-nav-primary">
+                            <i class="md-icon">menu</i>
+                            </button>									
+                        </div>
+                        <!-- /.container -->
+                    </div>
+                    <!-- /.admin-header-navigation -->
+                    <div class="admin-header-search">
+                        <form method="get" action="http://materialist-html.wearecodevision.com/admin-users.html?">
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="md-icon">search</i>
+                                </div>
+                                <!-- /.input-group-addon -->
+                                <input type="text" class="form-control" placeholder="Enter your search keyword ...">
+                            </div>
+                            <!-- /.form-group -->
+                        </form>
+                    </div>
+                    <!-- /.admin-header-search -->
+                </div>
+                <!-- /admin-header -->
+                <div class="admin-content">
+                    <div class="container-fluid">
+                        <div class="admin-title">
+                            <h1>Users Management</h1>
+                            <ul class="breadcrumb">
+                                <li><a href="index.html">Materialist</a> <i class="md-icon">keyboard_arrow_right</i></li>
+                                <li><a href="admin-dashboard.html">Dashboard</a> <i class="md-icon">keyboard_arrow_right</i></li>
+                                <li class="active">Users</li>
+                            </ul>
+                            <!-- /.breadcrumb -->	
+                        </div>
+                        <!-- /.admin-title -->
+                        <div class="admin-box no-padding">
+                            <table class="table small-header">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>Image</th>
+                                        <th>Name</th>
+                                        <th>Role</th>
+                                        <th>Package</th>
+                                        <th>Last Access</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="min-width"><input type="checkbox"></td>
+                                        <td class="min-width">
+                                            <div class="user-avatar">
+                                                <img src="assets/img/tmp/profile-1.jpg" alt="See H. Oceguera">
+                                            </div>
+                                            <!-- /.user-avatar -->
+                                        </td>
+                                        <td>See H. Oceguera</td>
+                                        <td>Reviewer</td>
+                                        <td>-</td>
+                                        <td>12:08 12/08/2016</td>
+                                        <td class="min-width">
+                                            <a href="#" class="btn btn-primary"><i class="md-icon">edit</i> Edit</a>
+                                            <a href="#" class="btn btn-secondary"><i class="md-icon">delete</i> Remove</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="min-width"><input type="checkbox"></td>
+                                        <td class="min-width">
+                                            <div class="user-avatar">
+                                                <img src="assets/img/tmp/profile-2.jpg" alt="Claude M. Tinsley">
+                                            </div>
+                                            <!-- /.user-avatar -->
+                                        </td>
+                                        <td>Claude M. Tinsley</td>
+                                        <td>Admin</td>
+                                        <td>Gold</td>
+                                        <td>11:23 15/08/2016</td>
+                                        <td class="min-width">
+                                            <a href="#" class="btn btn-primary"><i class="md-icon">edit</i> Edit</a>
+                                            <a href="#" class="btn btn-secondary"><i class="md-icon">delete</i> Remove</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="min-width"><input type="checkbox"></td>
+                                        <td class="min-width">
+                                            <div class="user-avatar">
+                                                <img src="assets/img/tmp/profile-3.jpg" alt="Diedre S. Coleman">
+                                            </div>
+                                            <!-- /.user-avatar -->
+                                        </td>
+                                        <td>Diedre S. Coleman</td>
+                                        <td>Subscriber</td>
+                                        <td>Silver</td>
+                                        <td>11:23 15/08/2016</td>
+                                        <td class="min-width">
+                                            <a href="#" class="btn btn-primary"><i class="md-icon">edit</i> Edit</a>
+                                            <a href="#" class="btn btn-secondary"><i class="md-icon">delete</i> Remove</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="min-width"><input type="checkbox"></td>
+                                        <td class="min-width">
+                                            <div class="user-avatar">
+                                                <img src="assets/img/tmp/profile-4.jpg" alt="John K. Olvera">
+                                            </div>
+                                            <!-- /.user-avatar -->
+                                        </td>
+                                        <td>John K. Olvera</td>
+                                        <td>Editor</td>
+                                        <td>Bronze</td>
+                                        <td>11:23 15/08/2016</td>
+                                        <td class="min-width">
+                                            <a href="#" class="btn btn-primary"><i class="md-icon">edit</i> Edit</a>
+                                            <a href="#" class="btn btn-secondary"><i class="md-icon">delete</i> Remove</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="min-width"><input type="checkbox"></td>
+                                        <td class="min-width">
+                                            <div class="user-avatar">
+                                                <img src="assets/img/tmp/profile-5.jpg" alt="Wayne S. Hernandez">
+                                            </div>
+                                            <!-- /.user-avatar -->
+                                        </td>
+                                        <td>Wayne S. Hernandez</td>
+                                        <td>Reviewer</td>
+                                        <td>Silver</td>
+                                        <td>11:23 15/08/2016</td>
+                                        <td class="min-width">
+                                            <a href="#" class="btn btn-primary"><i class="md-icon">edit</i> Edit</a>
+                                            <a href="#" class="btn btn-secondary"><i class="md-icon">delete</i> Remove</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="min-width"><input type="checkbox"></td>
+                                        <td class="min-width">
+                                            <div class="user-avatar">
+                                                <img src="assets/img/tmp/profile-6.jpg" alt="Charles B. Stocks">
+                                            </div>
+                                            <!-- /.user-avatar -->
+                                        </td>
+                                        <td>Charles B. Stocks</td>
+                                        <td>Subscriber</td>
+                                        <td>Gold</td>
+                                        <td>11:23 15/08/2016</td>
+                                        <td class="min-width">
+                                            <a href="#" class="btn btn-primary"><i class="md-icon">edit</i> Edit</a>
+                                            <a href="#" class="btn btn-secondary"><i class="md-icon">delete</i> Remove</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="min-width"><input type="checkbox"></td>
+                                        <td class="min-width">
+                                            <div class="user-avatar">
+                                                <img src="assets/img/tmp/profile-7.jpg" alt="Micheal S. Haynes">
+                                            </div>
+                                            <!-- /.user-avatar -->
+                                        </td>
+                                        <td>Micheal S. Haynes</td>
+                                        <td>Admin</td>
+                                        <td>-</td>
+                                        <td>11:23 15/08/2016</td>
+                                        <td class="min-width">
+                                            <a href="#" class="btn btn-primary"><i class="md-icon">edit</i> Edit</a>
+                                            <a href="#" class="btn btn-secondary"><i class="md-icon">delete</i> Remove</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="min-width"><input type="checkbox"></td>
+                                        <td class="min-width">
+                                            <div class="user-avatar">
+                                                <img src="assets/img/tmp/profile-8.jpg" alt="Bryant T. Campbell">
+                                            </div>
+                                            <!-- /.user-avatar -->
+                                        </td>
+                                        <td>Bryant T. Campbell</td>
+                                        <td>Subscriber</td>
+                                        <td>Silver</td>
+                                        <td>14:33 15/10/2016</td>
+                                        <td class="min-width">
+                                            <a href="#" class="btn btn-primary"><i class="md-icon">edit</i> Edit</a>
+                                            <a href="#" class="btn btn-secondary"><i class="md-icon">delete</i> Remove</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="min-width"><input type="checkbox"></td>
+                                        <td class="min-width">
+                                            <div class="user-avatar">
+                                                <img src="assets/img/tmp/profile-9.jpg" alt="Chelsea T. Farnum">
+                                            </div>
+                                            <!-- /.user-avatar -->
+                                        </td>
+                                        <td>Chelsea T. Farnum</td>
+                                        <td>Editor</td>
+                                        <td>Bronze</td>
+                                        <td>11:23 20/08/2016</td>
+                                        <td class="min-width">
+                                            <a href="#" class="btn btn-primary"><i class="md-icon">edit</i> Edit</a>
+                                            <a href="#" class="btn btn-secondary"><i class="md-icon">delete</i> Remove</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="min-width"><input type="checkbox"></td>
+                                        <td class="min-width">
+                                            <div class="user-avatar">
+                                                <img src="assets/img/tmp/profile-10.jpg" alt="Shirley J. Lam">
+                                            </div>
+                                            <!-- /.user-avatar -->
+                                        </td>
+                                        <td>Shirley J. Lam</td>
+                                        <td>Reviewer</td>
+                                        <td>-</td>
+                                        <td>20:12 15/08/2016</td>
+                                        <td class="min-width">
+                                            <a href="#" class="btn btn-primary"><i class="md-icon">edit</i> Edit</a>
+                                            <a href="#" class="btn btn-secondary"><i class="md-icon">delete</i> Remove</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!-- /.table -->
+                        </div>
+                        <!-- /.admin-box -->
+                        <nav class="pagination-wrapper">
+                            <ul class="pagination">
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                    <span class="sr-only">Previous</span>
+                                    </a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">1 <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="page-item active">
+                                    <a class="page-link" href="#">2</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">3</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                    <span class="sr-only">Next</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <!-- /.container-fluid -->
+                </div>
+                <!-- /.admin-content -->		
+            </div>
+            <!-- /.admin-main -->
+        </div>
+        <!-- /.admin-wrapper -->
+        <div class="customizer">
+            <div class="customizer-content">
+                <h2>Color Variant</h2>
+                <ul>
+                    <li><a href="assets/css/materialist-red.css" class="background-red"></a></li>
+                    <li><a href="assets/css/materialist-pink.css" class="background-pink"></a></li>
+                    <li><a href="assets/css/materialist-purple.css" class="background-purple"></a></li>
+                    <li><a href="assets/css/materialist-deep-purple.css" class="background-deep-purple"></a></li>
+                    <li><a href="assets/css/materialist-indigo.css" class="background-indigo"></a></li>
+                    <li><a href="assets/css/materialist-blue.css" class="background-blue"></a></li>
+                    <li><a href="assets/css/materialist-light-blue.css" class="background-light-blue"></a></li>
+                    <li><a href="assets/css/materialist-cyan.css" class="background-cyan"></a></li>
+                    <li><a href="assets/css/materialist-teal.css" class="background-teal"></a></li>
+                    <li><a href="assets/css/materialist-green.css" class="background-green"></a></li>
+                    <li><a href="assets/css/materialist-light-green.css" class="background-light-green"></a></li>
+                    <li><a href="assets/css/materialist-lime.css" class="background-lime"></a></li>
+                    <li><a href="assets/css/materialist-yellow.css" class="background-yellow"></a></li>
+                    <li><a href="assets/css/materialist-amber.css" class="background-amber"></a></li>
+                    <li><a href="assets/css/materialist-orange.css" class="background-orange"></a></li>
+                    <li><a href="assets/css/materialist-deep-orange.css" class="background-deep-orange"></a></li>
+                    <li><a href="assets/css/materialist-brown.css" class="background-brown"></a></li>
+                    <li><a href="assets/css/materialist-blue-grey.css" class="background-blue-grey"></a></li>
+                </ul>
+            </div>
+            <!-- /.customizer-content -->
+            <div class="customizer-title">
+                <span><i class="fa fa-cog"></i> Customizer</span>
+            </div>
+            <!-- /.customizer-title -->
+        </div>
+        <!-- /.customizer -->
+        <script type="text/javascript" src="assets/js/jquery.js"></script>
+        <script type="text/javascript" src="assets/js/tether.min.js"></script>
+        <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="assets/js/leaflet.js"></script>
+        <script type="text/javascript" src="assets/js/leaflet.markercluster.js"></script>
+        <script type="text/javascript" src="assets/libraries/owl-carousel/owl.carousel.min.js"></script>
+        <script type="text/javascript" src="assets/js/materialist.js"></script>
+    </body>
+    <!-- Mirrored from materialist-html.wearecodevision.com/admin-users.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Mar 2017 02:48:00 GMT -->
+</html>
